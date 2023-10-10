@@ -1,3 +1,13 @@
 * {
-  background-color: beige;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  background: rgb(63, 94, 251);
+  background: linear-gradient(45deg, rgb(63, 94, 251) 25%, rgb(73, 70, 252) 75%);
+  width: 100vw;
+  height: 100vh;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
