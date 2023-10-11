@@ -6,8 +6,6 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background: rgb(70, 193, 252);
     background: linear-gradient(45deg, rgba(70, 193, 252, 1) 25%, rgba(63, 94, 251, 1) 75%);
     background-repeat: no-repeat;
@@ -35,9 +33,14 @@ body {
 }
 
 .meteo{
-    display: flex;
-    justify-content: center; 
-    padding: 10px;
+    text-align: center;
+    h2{
+        padding: 10px;
+    }
+    .min-max{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .meteo5j{
