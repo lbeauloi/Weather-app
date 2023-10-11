@@ -1,13 +1,58 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
 }
 
-body{
-    text-align: center;
-    background: rgb(63,94,251);
-    background: linear-gradient(45deg, rgba(63,94,251,1) 25%, rgba(73,70,252,1) 75%);
-    width: 100vw;
-    height: 100vh;
-    color: white;
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(70, 193, 252);
+    background: linear-gradient(45deg, rgba(70, 193, 252, 1) 25%, rgba(63, 94, 251, 1) 75%);
+    background-repeat: no-repeat;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    #inputCity{
+        border: 0;
+        height: 40px;
+        width: 300px;
+        border-radius: 30px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .submitBtn{
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+    }
+    
+}
+
+.meteo{
+    display: flex;
+    justify-content: center; 
+    padding: 10px;
+}
+
+.meteo5j{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.imageVille{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 30%;
+    }
 }
