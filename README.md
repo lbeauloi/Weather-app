@@ -12,8 +12,11 @@ Création d'une appli météo
 - HTML
 - JavaScript
 - SCSS
-
+---
+### Liens des consignes
+[The Weather Application](https://github.com/becodeorg/CRL-KELLER-6/tree/main/1.TRAIL/2.The-Hill/1.DOM/13.Weather-app#readme)
 ---
 ### Final Project Link
 https://lbeauloi.github.io/weather-app/
 ---
+
