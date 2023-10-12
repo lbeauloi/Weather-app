@@ -8,6 +8,7 @@ body {
   background: rgb(70, 193, 252);
   background: linear-gradient(45deg, rgb(70, 193, 252) 25%, rgb(63, 94, 251) 75%);
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .search {

@@ -3,12 +3,15 @@
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     // box-sizing: border-box;
+    
 }
 
 body {
     background: rgb(70, 193, 252);
     background: linear-gradient(45deg, rgba(70, 193, 252, 1) 25%, rgba(63, 94, 251, 1) 75%);
     background-repeat: no-repeat;
+    min-height: 100vh;
+    
 }
 
 .search{
