@@ -79,6 +79,7 @@ body {
     padding: 30px;
     margin: auto;
     flex-wrap: wrap;
+    
     .day{
         border-radius: 10px;
         background:rgba(211, 211, 211, 0.5);
@@ -86,6 +87,7 @@ body {
         text-align: center;
         padding: 10px;
         margin: 5px;
+       
         .jourSemaine{
             text-transform: capitalize;
             padding: 2px;
