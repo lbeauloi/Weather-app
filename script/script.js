@@ -62,23 +62,28 @@ submitBtn.addEventListener("click", () => {
       const forecasts = data.list;
       const selectedHours = [0, 8, 16, 24, 32, 40]; //vu que l'API fourni des update toutes les 3h, et on ne veut pas avoir meteo lundi 6h 10°C, lundi 9h 12°C, lundi 12h 18°C, etc.
       const previsionContainer = document.querySelector(".meteo5j"); // on selectionne la div existante
+
       previsionContainer.innerHTML = ""; // on efface le contenu précédent
+
       selectedHours.forEach((hour) => {
         const forecast = forecasts[hour];
         const dateTime = new Date(forecast.dt * 1000);
         const temperature = forecast.main.temp;
         const tempRound = Math.round(temperature);
+        const weatherType = forecast.weather[0].main; // le type de temps (clouds, rain, clear,...)
 
-        // une div pour chaque jour de la semaine 
+        // une div pour chaque jour de la semaine
         const dayDiv = document.createElement("div");
         dayDiv.classList.add("day"); // on donne une classe à la div
 
         const jourSemaine = document.createElement("p");
         const prevision = document.createElement("p");
+        const weatherIcon = document.createElement("img"); // image météo
 
         // on def une classe
         jourSemaine.classList.add("jourSemaine");
         prevision.classList.add("prevision");
+        weatherIcon.classList.add("imagePrev");
 
         //mettre à jour les "p"
         jourSemaine.textContent = dateTime.toLocaleDateString("fr-FR", {
@@ -86,8 +91,23 @@ submitBtn.addEventListener("click", () => {
         });
         prevision.textContent = `${tempRound}°C`;
 
+        if (weatherType == "Clouds") {
+          weatherIcon.src = "style/images/clouds.png";
+        } else if (weatherType == "Clear") {
+          weatherIcon.src = "style/images/clear.png";
+        } else if (weatherType == "Drizzle") {
+          weatherIcon.src = "style/images/drizzle.png";
+        } else if (weatherType == "Mist") {
+          weatherIcon.src = "style/images/mist.png";
+        } else if (weatherType == "Rain") {
+          weatherIcon.src = "style/images/rain.png";
+        } else if (weatherType == "Snow") {
+          weatherIcon.src = "style/images/snow.png";
+        }
+
         dayDiv.appendChild(jourSemaine);
         dayDiv.appendChild(prevision);
+        dayDiv.appendChild(weatherIcon);
         previsionContainer.appendChild(dayDiv);
       });
     })
@@ -106,7 +126,7 @@ submitBtn.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
       const imageUrl = data.results[0].urls.regular;
-      const imgCity = document.querySelector(".imageVille"); // on selectionne la div existante
+      const imgCity = document.querySelector(".colDroite"); // on selectionne la div existante
       imgCity.innerHTML = ""; // on efface le contenu précédent
       const img = document.createElement("img");
       img.src = imageUrl;
